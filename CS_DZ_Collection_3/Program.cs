@@ -12,6 +12,7 @@ namespace CS_DZ_Collection_3
         {
             List<int> numbers = new List<int>();
             bool canExit = false;
+            
 
             Console.WriteLine("Для сложения введите sum. Для выхода введите exit.");
 
@@ -23,22 +24,12 @@ namespace CS_DZ_Collection_3
                 switch (userInput)
                 {
                     case "sum":
-                        int numbersSum = 0;
-
-                        foreach (var item in numbers)
-                        {
-                            numbersSum += item;
-                        }
-
-                        Console.Clear();
-                        Console.WriteLine("Сумма: " + numbersSum);
+                        Sum(numbers);
                         break;
 
                     case "exit":
-
                         canExit = true;
                         break;
-
                 }
 
                 if (int.TryParse(userInput, out int result))
@@ -46,6 +37,20 @@ namespace CS_DZ_Collection_3
                     numbers.Add(result);
                 }
             }
+        }
+
+        static public List<int> Sum(List<int> numbers)
+        {
+            int numbersSum = 0;
+
+            foreach (var item in numbers)
+            {
+                numbersSum += item;
+            }
+
+            Console.Clear();
+            Console.WriteLine("Сумма: " + numbersSum);
+            return numbers;
         }
     }
 }
