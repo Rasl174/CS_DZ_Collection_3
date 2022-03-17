@@ -13,7 +13,6 @@ namespace CS_DZ_Collection_3
             List<int> numbers = new List<int>();
             bool canExit = false;
             
-
             Console.WriteLine("Для сложения введите sum. Для выхода введите exit.");
 
             while (!canExit)
